@@ -1,3 +1,7 @@
+# https://h4llelujah.github.io/SeenThis-ReactApp/
+
+You can Learn about my project on page About on this site
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
