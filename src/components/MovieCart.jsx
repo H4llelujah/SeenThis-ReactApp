@@ -49,7 +49,7 @@ export default function MovieCart({movie}) {
             : <img className='poster' src={movie.Poster} alt='Poster'></img>
             }
             <a href= {`https://www.youtube.com/results?search_query=${movie.Title}+trailer`} target='_blank' rel="noreferrer" className='trailer'>
-              <p className='test'>Trailer</p>
+              <p className='popup_text'>Trailer</p>
               <FontAwesomeIcon icon={faPlay}/>
             </a>
             <div className='description'>

@@ -43,7 +43,7 @@ export default function MovieItem({movie}) {
                 </div>
                 <div className='rate'>
                     <FontAwesomeIcon fontSize='21px' color='yellow' icon={faStar} />
-                    <p className='rate-number'>{movie.rating}</p>
+                    <p className='rate-number'>{movie.ratingKinopoisk}</p>
                 </div>
             </div>
         </div>

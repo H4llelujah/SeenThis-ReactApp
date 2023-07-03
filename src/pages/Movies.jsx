@@ -13,7 +13,8 @@ function Movies() {
 
   const [fetchingMovies, isLoading, error] = useFetching( async () =>{
      const response = await MovieService.getAll();
-     setMovies(...movies, response.films);
+     setMovies(...movies, response.items);
+     console.log(response);
   })
 
 

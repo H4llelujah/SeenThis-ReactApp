@@ -7,7 +7,7 @@ export default function About() {
 
     <div>
         <Layout>
-            <div className='about'>
+            <div className='about wrapper'>
               <h1>This is my project that works with the <a href='https://kinopoiskapiunofficial.tech/' target='_blank' rel="noreferrer">Kinopoisk Api Unofficial"</a> and <a href='https://www.omdbapi.com/' target='_blank' rel="noreferrer">"OMDb API"</a>. Unfortunately, I couldn't implement filtering by various movie parameters because these APIs do not provide such free features. If the movie list on the "Home" page is not working for you, you can change the API key in the site files, specifically in "src/API/MovieService.js" (an additional key is indicated in the comment on the first line) (each API provides around 500 requests per day, and unfortunately, I cannot fix this otherwise).
               <span style={{color: "#bac7e8"}}> The Sign In and Registration pages currently do not have any logic.</span>
               </h1>
