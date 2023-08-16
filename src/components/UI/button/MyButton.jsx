@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import classes from './MyButton.module.css'
 
 const MyButton = ({children, ...props}) => {
@@ -9,4 +9,4 @@ const MyButton = ({children, ...props}) => {
     );
 };
 
-export default MyButton;
+export default memo (MyButton);

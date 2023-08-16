@@ -30,4 +30,4 @@ const SearchQuerry = memo(() => {
 })
 
 
-export default SearchQuerry
+export default memo(SearchQuerry);

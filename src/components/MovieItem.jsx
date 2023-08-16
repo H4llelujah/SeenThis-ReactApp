@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function MovieItem({movie}) {
 
@@ -18,7 +18,7 @@ export default function MovieItem({movie}) {
     }
 
     const handleClick = () => {
-        navigate(`/movie/${MovieName}`)
+        navigate(`/movie/${MovieName}`, {state: {movieId: movie.kinopoiskId}});
     }
   return (
     <div onClick={handleClick} className='movie-object'>

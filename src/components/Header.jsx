@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Navbar from './UI/navbar/navbar'
 
-export default function Header() {
+function Header() {
   return (
     <header className='header'>
         <div className='wrapper header-wrapper'>
@@ -11,3 +11,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default memo(Header);

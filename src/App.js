@@ -16,16 +16,6 @@ function App() {
     if (localStorage.getItem('myMovies')){
       setMyMovies(JSON.parse(localStorage.getItem('myMovies')))
     }
-    fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/301', {
-    method: 'GET',
-    headers: {
-        'X-API-KEY': 'c0e1e51f-e038-4f8f-87af-ebe82d35fc05',
-        'Content-Type': 'application/json',
-    },
-})
-    .then(res => res.json())
-    .then(json => console.log(json))
-    .catch(err => console.log(err))
   }, [])
 
   return (

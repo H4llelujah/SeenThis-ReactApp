@@ -6,7 +6,7 @@ import { MovieContext } from '../context';
 
 
 
-export default function MovieCart({movie}) {
+export default function MovieCart({movie, movieId}) {
 
   const response = (movie.Response === 'True');
   const {myMovies, setMyMovies} = useContext(MovieContext);

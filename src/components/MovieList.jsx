@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import MovieItem from './MovieItem';
 
-export default function MovieList({movies}) {
+function MovieList({movies}) {
 
   if (!movies.length){
     return (
@@ -18,3 +18,4 @@ export default function MovieList({movies}) {
   )
 }
 
+export default memo (MovieList)

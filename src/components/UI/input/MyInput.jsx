@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import clasess from './MyInput.module.css';
 
 const MyInput = (props) => {
@@ -7,4 +7,4 @@ const MyInput = (props) => {
     )
 }
 
-export default MyInput;
+export default memo (MyInput);

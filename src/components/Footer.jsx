@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export default function Footer () {
+function Footer () {
   return (
     <footer className='footer'>
         <div className='wrapper footer-wrapper'>
@@ -14,3 +14,5 @@ export default function Footer () {
     </footer>
   )
 }
+
+export default memo(Footer)

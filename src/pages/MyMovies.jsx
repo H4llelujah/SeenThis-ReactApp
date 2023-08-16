@@ -9,7 +9,6 @@ const MyMovies = () => {
         <div>
             <Layout>
                 <h1 className='myMovies_header'>My favorite movies</h1>
-                {/* <button onClick={show}>Show My Movies</button> */}
                 {
                     myMovies.length === 0
                     ? <div>Вы еще не добавили фильмы</div>
