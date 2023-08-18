@@ -8,7 +8,7 @@ import MyButton from './UI/button/MyButton';
 import MovieService from '../API/MovieService';
 
 
-function Filter({setFetchType, filters, setFilters, fetchType}) {
+function Filter({setFetchType, filters, setFilters, fetchType, setPage}) {
   
     const [filtersId, setFiltersId] = useState([])
   
@@ -32,6 +32,7 @@ function Filter({setFetchType, filters, setFilters, fetchType}) {
 
     const acceptFilters = () => {
         setFetchType(fetchType+1);
+        setPage(1);
       }
     
     const toggleFilterContent = () => {

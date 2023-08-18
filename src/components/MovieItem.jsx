@@ -8,6 +8,22 @@ export default function MovieItem({movie}) {
     const navigate = useNavigate();
 
     let MovieName = null;
+
+    let rating = null;
+
+    let movieId = null;
+
+    if (movie.kinopoiskId){
+        movieId = movie.kinopoiskId;
+    }else{
+        movieId = movie.filmId;
+    }
+
+    if(movie.rating){
+        rating = movie.rating
+    }else{
+        rating = movie.ratingKinopoisk;
+    }
     
     if (movie.nameOriginal){
         MovieName = movie.nameOriginal;
@@ -18,7 +34,7 @@ export default function MovieItem({movie}) {
     }
 
     const handleClick = () => {
-        navigate(`/movie/${MovieName}`, {state: {movieId: movie.kinopoiskId}});
+        navigate(`/movie/${MovieName}`, {state: {movieId: movieId}});
     }
   return (
     <div onClick={handleClick} className='movie-object'>
@@ -43,7 +59,7 @@ export default function MovieItem({movie}) {
                 </div>
                 <div className='rate'>
                     <FontAwesomeIcon fontSize='21px' color='yellow' icon={faStar} />
-                    <p className='rate-number'>{movie.ratingKinopoisk}</p>
+                    <p className='rate-number'>{rating}</p>
                 </div>
             </div>
         </div>

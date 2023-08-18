@@ -1,7 +1,7 @@
-const kinoApiKey = 'c0e1e51f-e038-4f8f-87af-ebe82d35fc05';
-// const kinoApiKey = '1a350648-ce9b-42f6-8ad5-175a48adfa5e';
+// const kinoApiKey = 'c0e1e51f-e038-4f8f-87af-ebe82d35fc05';
+const kinoApiKey = '1a350648-ce9b-42f6-8ad5-175a48adfa5e';
 // const kpURL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/';
-const kpURL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films?order=NUM_VOTE&type=ALL&ratingFrom=9&ratingTo=10&yearFrom=1000&yearTo=3000&page=1'
+const kpURL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1'
 const apikey = 'cc706953';
 
 
@@ -33,8 +33,8 @@ function transformFiltersToQueryParams(filters) {
   }
 
 export default class MovieService {
-    static async getAll(){
-            const response = await fetch(kpURL, {
+    static async getTop(page){
+            const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=${page}`, {
                 method: 'GET',
                 headers: {
                     'X-API-KEY': kinoApiKey,
@@ -80,11 +80,11 @@ export default class MovieService {
         const data = await response.json();
         return data;
     }
-    static async getByFilters(filters){
+    static async getByFilters(filters, page){
 
         const querryFilter = transformFiltersToQueryParams(filters);
 
-        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films?${querryFilter.countries}${querryFilter.genres}${querryFilter.sortBy}${querryFilter.type}ratingFrom=${querryFilter.rating[0]}&ratingTo=${querryFilter.rating[1]}&yearFrom=${querryFilter.year[0]}&yearTo=${querryFilter.year[1]}&${querryFilter.keyword}page=1`, {
+        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films?${querryFilter.countries}${querryFilter.genres}${querryFilter.sortBy}${querryFilter.type}ratingFrom=${querryFilter.rating[0]}&ratingTo=${querryFilter.rating[1]}&yearFrom=${querryFilter.year[0]}&yearTo=${querryFilter.year[1]}&${querryFilter.keyword}page=${page}`, {
             method: 'GET',
             headers: {
                 'X-API-KEY': kinoApiKey,

@@ -6,7 +6,7 @@ function Layout({children}) {
   return (
     <>
         <Header/>
-        <div className='wrapper'>
+        <div className='wrapper layout_wrapper'>
             {children}
         </div>
         <Footer/>
