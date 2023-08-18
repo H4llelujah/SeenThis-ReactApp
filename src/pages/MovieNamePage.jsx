@@ -45,6 +45,9 @@ const MovieNamePage = () => {
             {error &&
             <h1>Произошла ошибка! {error}</h1>
             }
+            {SimError &&
+                <h1 className='error'>Произошла ошибка! {SimError}</h1>
+            }
             {isLoading 
             ? <Loader/>
             :   <div>

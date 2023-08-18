@@ -1,9 +1,7 @@
 // const kinoApiKey = 'c0e1e51f-e038-4f8f-87af-ebe82d35fc05';
 const kinoApiKey = '1a350648-ce9b-42f6-8ad5-175a48adfa5e';
 // const kpURL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/';
-const kpURL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1'
 const apikey = 'cc706953';
-
 
 function transformFiltersToQueryParams(filters) {
     const newFilters = filters.reduce((accumulator, filter) => {

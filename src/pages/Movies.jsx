@@ -74,6 +74,9 @@ function Movies() {
         {error &&
           <h1 className='error'>Произошла ошибка! {error}</h1>
         }
+        {err &&
+          <h1 className='error'>Произошла ошибка! {err}</h1>
+        }
         {(isLoading === true || (fetchType > 0 && isFilteredLoading))
           ? <Loader></Loader>
           : <div>
