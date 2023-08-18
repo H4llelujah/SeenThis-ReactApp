@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import SimilarMovieItem from './SimilarMoviesItem';
 
 
@@ -7,9 +7,14 @@ function SimilarMovies({movies}) {
 
   const [isOpen, setIsOpen] = useState(false);
 
+
   const showMovies = () => {
     setIsOpen(!isOpen);
   } 
+
+  if (!movies.length){
+    return(<h1 className='message'>Нет похожих фильмов!</h1>)
+  }
 
   return (
     <div className='SimilarMovies'>

@@ -11,7 +11,7 @@ const MyMovies = () => {
                 <h1 className='myMovies_header'>My favorite movies</h1>
                 {
                     myMovies.length === 0
-                    ? <div>Вы еще не добавили фильмы</div>
+                    ? <div className='message'>Вы еще не добавили фильмы в избранное</div>
                     : myMovies.map(movie => 
                         <MovieCart key={movie.imdbID} movie={movie}></MovieCart>
                     )

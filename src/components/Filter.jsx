@@ -45,14 +45,16 @@ function Filter({setFetchType, filters, setFilters, fetchType, setPage}) {
       }, [])
 
 
+      if (FilterError) {
+        return (
+          <h1 className='error'>Произошла ошибка! {FilterError}</h1>
+        )
+      }
   return (
     <div className='filter'>
           <MyButton onClick={toggleFilterContent}>filter</MyButton>
           <div className={`collapse ${isFilterOpen ? 'active' : ''}`}>
             <div className={`filter-content ${isFilterOpen ? 'open' : ''}`}>
-              {FilterError &&
-                <h1 className='error'>Произошла ошибка! {FilterError}</h1>
-              }
               {isFiltersLoading
               ? <Loader></Loader>
               : 
